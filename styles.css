@@ -11,14 +11,19 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .calendar {
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 1000px;
+    max-width: 150vw;
     padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .calendar-header {
@@ -52,16 +57,29 @@ body {
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+    gap: 12px;
 }
 
 .day {
-    aspect-ratio: 1;
+    min-height: 160px;
+    min-width: 90px;
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 4px 4px 4px;
+    border: 1px solid #ddd;
     cursor: pointer;
-    border-radius: 5px;
+    background: #fff;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.day .date-number {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 18px;
 }
 
 .day:hover {
@@ -75,5 +93,76 @@ body {
 }
 
 .other-month {
-    color: #ccc;
+    background: #f5f5f5;
+    color: #999;
+}
+
+.notes-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.note {
+    background: #f0f0f0;
+    padding: 6px 10px;
+    margin: 1px 0;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    word-break: break-word;
+    font-size: 15px;
+}
+
+.note-input {
+    width: 100%;
+    min-width: 0;
+    background: #fff;
+    padding: 6px 4px;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
+    display: flex;
+    gap: 4px;
+    box-sizing: border-box;
+    margin-top: auto;
+    position: static;
+}
+
+.note-input input {
+    flex: 1;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.note-input button {
+    padding: 4px 8px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.note-input button:hover {
+    background: #45a049;
+}
+
+.delete-note {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    margin-left: 5px;
+}
+
+.delete-note:hover {
+    color: #cc0000;
 } 
