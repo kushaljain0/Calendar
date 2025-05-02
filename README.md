@@ -11,6 +11,14 @@ A simple interactive calendar application built with vanilla JavaScript, HTML, a
 - Proper handling of leap years and month lengths
 - Unit tests for core calendar logic
 
+## Advanced Features
+
+- **Add notes to any date:** Click on a date cell to open an input at the bottom. Type your note and click "Save". The note will appear in the cell.
+- **Multiple notes per date:** You can add several notes to the same date. Each note is shown below the date number.
+- **Delete notes:** Each note has a × button to remove it instantly.
+- **Notes persistence:** All notes are saved in your browser's localStorage and will remain after refreshing or reopening the page.
+- **Improved UI:** The calendar is wider, cells are larger, and notes are easier to read and manage.
+
 ## Files
 
 - `index.html` - Main HTML file containing the calendar structure
@@ -52,6 +60,13 @@ The tests verify:
 - Click the right arrow button (`>`) to go to the next month
 - The current day is highlighted in blue
 - Days from previous and next months are shown in gray
+
+## How to Use Notes
+
+- Click on any date cell to add a note. An input field and "Save" button will appear at the bottom of the cell.
+- Type your note and click "Save". The note will be added to the list for that date.
+- To delete a note, click the × button next to it.
+- Notes are stored in your browser and will persist between sessions.
 
 ## Technologies Used
 
